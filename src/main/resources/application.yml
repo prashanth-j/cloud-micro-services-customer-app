@@ -1,0 +1,27 @@
+
+spring:
+  application:
+    name: customer
+
+  jpa:
+    generate-ddl: true
+    show-sql: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: https://eurekah.cfapps.io/eureka
+
+producer:
+  ribbon:
+    ServerListRefreshInterval: 5000
+
+---
+spring:
+  profiles: dev
+
+security:
+  basic:
+    enabled: false
